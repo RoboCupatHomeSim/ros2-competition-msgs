@@ -1,3 +1,7 @@
+> [!NOTE]
+> This repository is for ROS 2.
+
+
 # ROS 2 Packages for Competition
 
 This repository contains the ROS 2 messages used in the competition and the ROS 2 nodes used for testing.
