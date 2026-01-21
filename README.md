@@ -22,8 +22,15 @@ Also install the required libraries below, such as rosbridge-suite.
 sudo rosdep init
 rosdep update
 sudo apt install -y git
+sudo apt install -y libncurses-dev
 sudo apt install -y python3-pip
 sudo apt install -y ros-$ROS_DISTRO-rosbridge-suite
+sudo apt install -y ros-$ROS_DISTRO-slam-toolbox
+sudo apt install -y ros-$ROS_DISTRO-xacro
+sudo apt install -y ros-$ROS_DISTRO-octomap
+sudo apt install -y ros-$ROS_DISTRO-hardware-interface
+sudo apt install -y ros-$ROS_DISTRO-ros2-control ros-$ROS_DISTRO-ros2-controllers ros-$ROS_DISTRO-controller-manager
+sudo apt install -y ros-$ROS_DISTRO-moveit ros-$ROS_DISTRO-moveit-ros-perception ros-$ROS_DISTRO-moveit-ros-occupancy-map-monitor
 ```
 
 #### Install Mongo C Driver
