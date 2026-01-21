@@ -13,12 +13,15 @@ Please see the [wiki page](https://github.com/RoboCupatHomeSim/ros2-competition-
 
 Please install ROS 2 Humble Hawksbill.
 
+The following command examples assume your ROS 2 workspace is `~/ros2_ws`.
+
 Also install the required libraries below, such as rosbridge-suite.
 
 #### Install Additional Dependencies
 ```bash:
 sudo rosdep init
 rosdep update
+sudo apt install -y git
 sudo apt install -y python3-pip
 sudo apt install -y ros-$ROS_DISTRO-rosbridge-suite
 ```
@@ -59,7 +62,7 @@ git clone https://github.com/SIGVerse/sigverse_ros_package.git
 cd ~/ros2_ws/src
 git clone https://github.com/RoboCupatHomeSim/ros2-competition-msgs
 cd ~/ros2_ws/
-colcon build --symlink-install
+colcon build --symlink-install --packages-skip sigverse_turtlebot3
 source ~/ros2_ws/install/setup.bash
 ```
 
