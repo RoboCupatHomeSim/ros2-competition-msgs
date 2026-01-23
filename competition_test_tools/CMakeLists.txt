@@ -40,8 +40,23 @@ ament_target_dependencies(teleop_human_navigation rclcpp std_msgs geometry_msgs 
 target_link_libraries(teleop_human_navigation ${CURSES_LIBRARIES})
 target_include_directories(teleop_human_navigation PRIVATE include ${CURSES_INCLUDE_DIR})
 
+add_executable(handyman_sample src/handyman_sample.cpp)
+ament_target_dependencies(handyman_sample rclcpp std_msgs geometry_msgs sensor_msgs trajectory_msgs tf2_ros tf2_geometry_msgs handyman_msgs)
+target_link_libraries(handyman_sample ${CURSES_LIBRARIES})
+target_include_directories(handyman_sample PRIVATE include ${CURSES_INCLUDE_DIR})
+
+add_executable(interactive_cleanup_sample src/interactive_cleanup_sample.cpp)
+ament_target_dependencies(interactive_cleanup_sample rclcpp std_msgs geometry_msgs sensor_msgs trajectory_msgs tf2_ros tf2_geometry_msgs interactive_cleanup_msgs)
+target_link_libraries(interactive_cleanup_sample ${CURSES_LIBRARIES})
+target_include_directories(interactive_cleanup_sample PRIVATE include ${CURSES_INCLUDE_DIR})
+
+add_executable(human_navigation_sample src/human_navigation_sample.cpp)
+ament_target_dependencies(human_navigation_sample rclcpp std_msgs geometry_msgs sensor_msgs trajectory_msgs tf2_ros tf2_geometry_msgs human_navigation_msgs)
+target_link_libraries(human_navigation_sample ${CURSES_LIBRARIES})
+target_include_directories(human_navigation_sample PRIVATE include ${CURSES_INCLUDE_DIR})
+
 install(
-  TARGETS teleop_handyman teleop_interactive_cleanup teleop_human_navigation
+  TARGETS teleop_handyman teleop_interactive_cleanup teleop_human_navigation handyman_sample interactive_cleanup_sample human_navigation_sample
   DESTINATION lib/${PROJECT_NAME}
 )
 

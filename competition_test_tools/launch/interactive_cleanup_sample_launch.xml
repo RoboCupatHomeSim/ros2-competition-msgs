@@ -3,13 +3,11 @@
 	<arg name="sigverse_ros_bridge_port"        default="50001" />
 	<arg name="ros_bridge_port"                 default="9090" />
 
-	<node pkg="competition_test_tools" exec="teleop_handyman" output="screen" launch-prefix="gnome-terminal --geometry=80x30+100+100 -t 'Handyman' -- ">
+	<node pkg="competition_test_tools" exec="interactive_cleanup_sample" output="screen" launch-prefix="gnome-terminal --geometry=80x30+100+100 -t 'Interactive Cleanup' -- ">
 		<!--
-		<remap from="/hsrb/message/to_robot"                  to="/hsrb/message/to_robot" />
-		<remap from="/hsrb/message/to_human"                  to="/hsrb/message/to_human" />
-		<remap from="/hsrb/joint_states"                      to="/hsrb/joint_states" />
+		<remap from="/interactive_cleanup/message/to_robot"   to="/interactive_cleanup/message/to_robot" />
+		<remap from="/interactive_cleanup/message/to_human"   to="/interactive_cleanup/message/to_human" />
 		<remap from="/hsrb/command_velocity"                  to="/hsrb/command_velocity" />
-		<remap from="/hsrb/omni_base_controller/command"      to="/hsrb/omni_base_controller/command" />
 		<remap from="/hsrb/arm_trajectory_controller/command" to="/hsrb/arm_trajectory_controller/command" />
 		<remap from="/hsrb/gripper_controller/command"        to="/hsrb/gripper_controller/command" />
 		-->
@@ -24,7 +22,5 @@
 		<arg name="send_action_goals_in_new_thread" value="true"/>
 <!--		<arg name="bson_only_mode" value="true"/> -->
 	</include>
-	
-	<node pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share competition_test_tools)/launch/hsr.rviz"/>
 </launch>
 

@@ -12,8 +12,6 @@
 		<remap from="/hsrb/omni_base_controller/command"      to="/hsrb/omni_base_controller/command" />
 		<remap from="/hsrb/arm_trajectory_controller/command" to="/hsrb/arm_trajectory_controller/command" />
 		<remap from="/hsrb/gripper_controller/command"        to="/hsrb/gripper_controller/command" />
-		<remap from="/hsrb/suction_control/goal"              to="/hsrb/suction_control/goal" />
-		<remap from="/hsrb/suction_control/result"            to="/hsrb/suction_control/result" />
 		-->
 	</node>
 

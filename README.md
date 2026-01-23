@@ -73,6 +73,21 @@ colcon build --symlink-install --packages-skip sigverse_turtlebot3
 source ~/ros2_ws/install/setup.bash
 ```
 
+## How to Run Simple Samples
+
+You can run the simple sample apps.  
+Commands vary by task.
+
+```bash:
+ros2 launch competition_test_tools handyman_sample_launch.xml
+```
+```bash:
+ros2 launch competition_test_tools interactive_cleanup_sample_launch.xml
+```
+```bash:
+ros2 launch competition_test_tools human_navigation_sample_launch.xml
+```
+
 ## How to Run Teleoperation Tool
 
 You can operate the robot with keyboard operation.  
